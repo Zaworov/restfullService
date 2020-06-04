@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @RestController
 public class GreetingController {
-    private static final AtomicInteger counter = new AtomicInteger();
+    private final AtomicInteger counter = new AtomicInteger();
 
     @GetMapping("/greeting")
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
